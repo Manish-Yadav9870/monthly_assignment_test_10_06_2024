@@ -31,6 +31,9 @@
             z-index: 1;
             
         }
+        #icon_container{
+            display: none;
+        }
         #menu_container{
             /* border: 1px solid green; */
         }
@@ -232,12 +235,33 @@ background-size: cover;
      }
      @media screen and (min-width:360px) and (max-width:900px) {
         nav{
-            display: block;
+            display: flex;
+            justify-content: space-between;
+            /* display: block; */
             margin: auto;
             width: 95%;
         }
-        #logo_container{
+        #logo_container img{
+            width: 30%;
+            transition: all 0.8s ease-in-out;
+            
+        }
+        #logo_container img:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        #menu_container{
             display: none;
+        }
+        #icon_container{
+            padding: 10px;
+            display: block;
+            font-size: x-large;
+        }
+        #logo_container{
+            padding: 5px;
+            display: block;
+            width: 45%;
         }
     #image_container{
         width: 95%;
@@ -336,6 +360,12 @@ background-size: cover;
             margin: auto;
             width: 98%;
         }
+        #menu_container{
+            display: block;
+        }
+        #icon_container{
+           display: none;
+        }
         #logo_container{
             display: none;
         }
@@ -411,6 +441,7 @@ background-size: cover;
                     <li>About</li>
                 </ul>
             </div>
+            <div id="icon_container"><span>&#9776;</span></div>
         </nav>
         <div id="image_container">
             <img src="https://c1.wallpaperflare.com/preview/79/806/473/book-business-drawing-education.jpg" alt="">
